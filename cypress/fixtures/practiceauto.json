@@ -1,0 +1,8 @@
+{
+    "username":"standard_user",
+    "password":"secret_sauce",
+    "products":["Sauce Labs Backpack","Sauce Labs Bolt T-Shirt"],
+    "firstName":"kishore",
+    "lastName":"kumar",
+    "zipCode":"600101"
+}
