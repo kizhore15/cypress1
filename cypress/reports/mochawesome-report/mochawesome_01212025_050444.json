@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-20T23:34:40.240Z",
+    "end": "2025-01-20T23:34:44.142Z",
+    "duration": 3902,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e685fc16-c23c-4ca0-a5e2-277efc3623a2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\swagLabs.cy.js",
+      "file": "cypress\\e2e\\swagLabs.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af2f94eb-a1bb-4618-bf74-a0af5eab964f",
+          "title": "Testing Swag Labs",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Negative User_Name",
+              "fullTitle": "Testing Swag Labs Negative User_Name",
+              "timedOut": null,
+              "duration": 1718,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/v1/');\ncy.get('#user-name').type('kishore');\ncy.get('input#password').type('secret_sauce');\ncy.get('#login-button').click();\ncy.get('[data-test=\"error\"]').should('have.text', 'Epic sadface: Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "8cf18d7f-5452-44bc-8d72-0128a8aec5b5",
+              "parentUUID": "af2f94eb-a1bb-4618-bf74-a0af5eab964f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8cf18d7f-5452-44bc-8d72-0128a8aec5b5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1718,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

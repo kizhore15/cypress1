@@ -27,5 +27,18 @@ module.exports = defineConfig({
       });
     },
     // baseUrl: 'https://www.saucedemo.com/'
-  }
+  },
+
+  reporter: 'mochawesome',
+
+  reporterOptions: {
+    reportDir: 'cypress/reports/mochawesome-report',
+    overwrite: false,
+    html: true,
+    json: true,
+    timestamp: 'mmddyyyy_HHMMss'
+  },
+
+  screenshotsFolder: 'cypress/screenshots',
+  videosFolder: 'cypress/videos',
 });

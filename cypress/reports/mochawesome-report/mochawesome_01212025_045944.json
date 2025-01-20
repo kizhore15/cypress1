@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-20T23:29:30.978Z",
+    "end": "2025-01-20T23:29:44.004Z",
+    "duration": 13026,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "821c434d-22f8-4ab5-b411-748a2349ab71",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.js",
+      "file": "cypress\\e2e\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7c399493-d2ce-4962-a926-1356b3b78a19",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template spec passes",
+              "timedOut": null,
+              "duration": 6442,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://practicetestautomation.com/practice-test-login/');\ncy.get('input#username').type('student');\ncy.get('input#password').type('Password123');\ncy.get('.btn').click();\ncy.url().should('include', 'practicetestautomation.com/logged-in-successfully');\ncy.get('strong').should('be.visible', 'Congratulations student. You successfully logged in!');\ncy.get('a[href*=\"practice-test-login\"]').click();\ncy.get(4000);",
+              "err": {},
+              "uuid": "e7923b63-537b-4704-817f-a6de22bccafc",
+              "parentUUID": "7c399493-d2ce-4962-a926-1356b3b78a19",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify incorrect username",
+              "fullTitle": "template spec verify incorrect username",
+              "timedOut": null,
+              "duration": 1593,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://practicetestautomation.com/practice-test-login/');\ncy.get('input#username').type(' incorrectUser');\ncy.get('input#password').type('Password123');\ncy.get('.btn').click();\ncy.get('div#error').should('be.visible').and('have.text', 'Your username is invalid!');",
+              "err": {},
+              "uuid": "279192c1-af8a-4816-81d1-9db1621f2a63",
+              "parentUUID": "7c399493-d2ce-4962-a926-1356b3b78a19",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e7923b63-537b-4704-817f-a6de22bccafc",
+            "279192c1-af8a-4816-81d1-9db1621f2a63"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8035,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
