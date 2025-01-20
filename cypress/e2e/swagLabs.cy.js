@@ -1,12 +1,12 @@
-// describe('Testing Swag Labs',()=>{
-//     it('Negative User_Name',()=>{
-//         cy.visit('https://www.saucedemo.com/v1/')
-//         cy.get('#user-name').type('kishore')
-//         cy.get('input#password').type('secret_sauce')
-//         cy.get('#login-button').click()
-//         cy.get('[data-test="error"]').should('have.text', 'Epic sadface: Username and password do not match any user in this service')
-//     })
-  // })
+describe('Testing Swag Labs',()=>{
+    it('Negative User_Name',()=>{
+        cy.visit('https://www.saucedemo.com/v1/')
+        cy.get('#user-name').type('kishore')
+        cy.get('input#password').type('secret_sauce')
+        cy.get('#login-button').click()
+        cy.get('[data-test="error"]').should('have.text', 'Epic sadface: Username and password do not match any user in this service')
+    })
+  })
 
 //     it('Product Oder',()=>{
 //         cy.visit('https://www.saucedemo.com/v1/')
