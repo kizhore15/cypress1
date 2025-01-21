@@ -29,12 +29,12 @@ module.exports = defineConfig({
     // baseUrl: 'https://www.saucedemo.com/'
   },
 
-  reporterEnabled: "spec, mochawesome",
-  mochawesomeReporterOptions: {
-    reportDir: "mochawesome-report",
-    overwrite: false,
-    html: true,
-    json: true
+  reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "mochawesome-report",
+      overwrite: false,
+      html: true,
+      json: true
   },
 
   screenshotsFolder: 'cypress/screenshots',
