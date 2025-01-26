@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-26T03:58:48.006Z",
+    "end": "2025-01-26T03:59:05.754Z",
+    "duration": 17748,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef16d17f-c085-4e6a-8637-036ccebe73de",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.js",
+      "file": "cypress\\e2e\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "142c09e5-aa72-4a76-b947-b9e1abd2f7f2",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template spec passes",
+              "timedOut": null,
+              "duration": 12166,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://practicetestautomation.com/practice-test-login/');\ncy.get('input#username').type('student');\ncy.get('input#password').type('Password123');\ncy.get('.btn').click();\ncy.url().should('include', 'practicetestautomation.com/logged-in-successfully');\ncy.get('strong').should('be.visible', 'Congratulations student. You successfully logged in!');\ncy.get('a[href*=\"practice-test-login\"]').click();\ncy.get(4000);",
+              "err": {},
+              "uuid": "5a9652d5-73b9-4825-9b57-94a16f4377c1",
+              "parentUUID": "142c09e5-aa72-4a76-b947-b9e1abd2f7f2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify incorrect username",
+              "fullTitle": "template spec verify incorrect username",
+              "timedOut": null,
+              "duration": 1873,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://practicetestautomation.com/practice-test-login/');\ncy.get('input#username').type(' incorrectUser');\ncy.get('input#password').type('Password123');\ncy.get('.btn').click();\ncy.get('div#error').should('be.visible').and('have.text', 'Your username is invalid!');",
+              "err": {},
+              "uuid": "b3613652-7a43-4c7f-8ed9-c0d354339107",
+              "parentUUID": "142c09e5-aa72-4a76-b947-b9e1abd2f7f2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5a9652d5-73b9-4825-9b57-94a16f4377c1",
+            "b3613652-7a43-4c7f-8ed9-c0d354339107"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14039,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
